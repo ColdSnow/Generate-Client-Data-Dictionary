@@ -182,6 +182,12 @@ def main():
     else:
         st.write("Please upload data dictionary and client table files")
 
+   # 在主函数末尾添加以下代码
+    if st.button("关闭应用并清除数据"):
+        # 清除缓存的数据
+        st.cache_data.clear()
+        st.experimental_rerun()  
+
 if __name__ == "__main__":
     main()
 
